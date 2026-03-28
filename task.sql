@@ -11,6 +11,5 @@ INSERT INTO Orders(CustomerID, Date)
 
 INSERT INTO OrderItems(OrderID, ProductID, Count)
     VALUES (LAST_INSERT_ID(), 1, 1);
-
-COMMIT;
 UPDATE Products SET WarehouseAmount = WarehouseAmount - 1 WHERE ID = 1;
+COMMIT;
